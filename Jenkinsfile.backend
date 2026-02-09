@@ -45,7 +45,7 @@ pipeline {
          gcloud config set project totemic-life-473009-q3       
 
          kubectl set image deployment/backend-deployment \
-           backend=$IMAGE_NAME:$BUILD_NUMBER
+           backend-container=$IMAGE_NAME:$BUILD_NUMBER
        '''
      }
     }

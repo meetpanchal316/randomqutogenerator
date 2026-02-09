@@ -41,7 +41,7 @@ pipeline {
       steps {
         sh '''
           kubectl set image deployment/frontend-deployment \
-            frontend=$IMAGE_NAME:$BUILD_NUMBER
+            frontend-container=$IMAGE_NAME:$BUILD_NUMBER
 
           kubectl rollout status deployment/frontend-deployment
         '''
